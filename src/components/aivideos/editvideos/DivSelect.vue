@@ -10,6 +10,7 @@
         </div>
       </div>
     </div>
+    <div class="i">此处为选项的说明文字，记得修改</div>
   </template>
   
   <script setup lang="ts">
@@ -30,6 +31,11 @@
   </script>
   
   <style scoped>
+  .i{
+    font-size: 12px;
+    padding-top: 1em;
+  }
+
   .dropdown-container {
 
     position: relative;

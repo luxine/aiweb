@@ -8,7 +8,8 @@
           <button class="control-button" @click="increaseValue">+</button>
         </div>
       </div>
-      <input type="range" min="1" max="10" v-model="value" class="slider" />
+      <!-- <input type="range" min="1" max="10" v-model="value" class="slider" /> -->
+      <el-slider v-model="value"  max="10" />
     </div>
   </template>
   
@@ -69,7 +70,43 @@
   }
   
   .slider {
-    width: 100%;
+      -webkit-appearance: none;
+      width: 100%;
+      height: 5px;
+      background:  #87ceeb;
+      background-color: #87ceeb;
+      outline: none;
+      opacity: 0.7;
+      transition: opacity .15s ease-in-out;
+      border-radius: 5px;
+}
+
+  .slider:hover {
+      opacity: 1;
   }
+
+  .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #87ceeb;
+      background-color: #87ceeb;
+      cursor: pointer;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #87ceeb;
+      background-color: #87ceeb;
+      cursor: pointer;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+
+
   </style>
   

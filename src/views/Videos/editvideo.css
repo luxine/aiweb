@@ -11,26 +11,35 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 50%;
     justify-content: space-between;
 }
 
 .TopLeft{
     width: 32%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     
 }
 
 .TopMiddle{
     width: 32%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .TopRight{
     width: 32%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .tabs {
