@@ -1,18 +1,19 @@
 <template>
 
 <div class="body-home">
-  <div class="start-button">
+  <div class="start-button" @click="handleClick">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit">
       <path d="M12 20h9"></path>
       <path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19 3 20l1-4 12.5-12.5z"></path>
     </svg>
-    <span>开始创作</span>
+    <span >开始创作</span>
   </div>
 <div class="marketplace-title">
     <h2>创作者广场</h2>
 </div>
 
 <div class="marketplace" >
+  <!-- ts-ignore -->
     <template  v-for=" i in 10" :key="i">
     <VideoCard
     v-for="(video, index) in videos" 
@@ -33,8 +34,16 @@
 
 <script setup lang="ts" >
 import VideoCard from '@/components/aivideos/VideoCard.vue';
-import { ref } from 'vue'
+import {  ref } from 'vue'
+import { useRouter } from 'vue-router';
 
+const router = useRouter()
+
+const handleClick = () => {
+  router.push({
+    name: 'editvideos'
+  })
+}
 const videos = ref([
   {
     thumbnail: 'https://via.placeholder.com/300x150',

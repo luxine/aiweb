@@ -6,7 +6,12 @@ export default{
       {
         path: '/',
         name: '/',
-        component: import('@/views/home/VideoViews.vue')
-      }
+        component: import('@/views/Videos/VideoViews.vue')
+      },
+      {
+        path: '/editvideos',
+        name: 'editvideos',
+        component: import('@/views/Videos/EditVideo.vue')
+      },
     ]
   }
